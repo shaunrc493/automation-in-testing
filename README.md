@@ -1,6 +1,6 @@
 # Cypress Test Strategy Demonstration
 
-**Author:** Shaun Curtis  
+**Author:** Shaun Curtis
 **Date:** Sunday 6th July 2025
 
 ## About This Repo
