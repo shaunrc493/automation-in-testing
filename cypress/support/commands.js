@@ -1,3 +1,5 @@
+import "@cypress-audit/lighthouse/commands";
+
 Cypress.Commands.add('adminLogin', (username, password) => {
     cy.session('admin', () => {
         cy.visit('/admin');
