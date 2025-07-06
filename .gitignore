@@ -1,5 +1,4 @@
 node_modules/
-cypress.config.js
 package-lock.json
 cypress/screenshots/
 cypress/videos/
