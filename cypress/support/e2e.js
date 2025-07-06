@@ -1,4 +1,5 @@
-import './commands'
+import './commands';
+import 'cypress-axe';
 
 const registerCypressGrep = require('@cypress/grep');
 registerCypressGrep();
