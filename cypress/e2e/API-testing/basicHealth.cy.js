@@ -85,31 +85,3 @@ describe('API Testing', { tags: ['@api'] }, () => {
     });
 
 });
-
-
-// api's to test
-//GET https://automationintesting.online/api/branding
-//GET https://automationintesting.online/api/room
-//GET https://automationintesting.online/api/room?checkin=2025-07-06&checkout=2025-07-07
-//GET https://automationintesting.online/api/room/3
-//POST https://automationintesting.online/api/booking
-// {
-//     "roomid": 3,
-//     "firstname": "sdfasdf",
-//     "lastname": "sdfasdf",
-//     "depositpaid": false,
-//     "bookingdates": {
-//         "checkin": "2025-07-06",
-//         "checkout": "2025-07-07"
-//     },
-//     "email": "test@test.com",
-//     "phone": "012334512334"
-// }
-//POST https://automationintesting.online/api/auth/login
-// {
-//     "username": "admin",
-//     "password": "password"
-// }
-//GET https://automationintesting.online/admin/rooms
-//GET https://automationintesting.online/api/message/count
-//GET https://automationintesting.online/api/report
