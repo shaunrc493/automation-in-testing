@@ -26,9 +26,9 @@ More detail on the approach can be found in [`docs/test-strategy.md`](docs/test-
 
 ### Installation
 
-1. git clone <this-repo>
-2. cd <repo-directory>
-3. npm install
+1. Clone this repo
+2. CD into the project
+3. Run `npm install`
 4. If it's your first time using Cypress you may need to run `npx cypress open`
 
 ### Running Tests
