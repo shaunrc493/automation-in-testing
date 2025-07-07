@@ -5,6 +5,13 @@ describe('Performance audit', { tags: ['@performance', '@non-functional'] }, () 
     const performanceThreshold = 66;
 
     it('should run lighthouse for performance metrics', () => {
+      // Arrange
+      // Ensure the performance threshold is set to an agreed value based on previous runs
+      // This threshold is used to determine if the performance is acceptable
+      // Act
+      // Visit the homepage
+      // Assert
+      // Check performance metrics using Lighthouse
         cy.visit('/');
 
         cy.lighthouse({

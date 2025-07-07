@@ -1,6 +1,12 @@
 describe('API Testing', { tags: ['@api'] }, () => {
     context('Branding API', () => {
         it('should return a 200 status code', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the branding API
+          // Assert
+          // Check that the response status is 200
             cy.request('GET', 'https://automationintesting.online/api/branding')
                 .then((response) => {
                     expect(response.status).to.eq(200);
@@ -8,6 +14,12 @@ describe('API Testing', { tags: ['@api'] }, () => {
         });
 
         it('should return a response time less than 1000ms', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the branding API
+          // Assert
+          // Check that the response time is less than 1000ms
             cy.request('GET', 'https://automationintesting.online/api/branding')
                 .then((response) => {
                     expect(response.duration).to.be.lessThan(1000);
@@ -15,6 +27,12 @@ describe('API Testing', { tags: ['@api'] }, () => {
         });
 
         it('should get branding information', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the branding API
+          // Assert
+          // Check that the response contains expected properties
             cy.request('GET', 'https://automationintesting.online/api/branding')
                 .then((response) => {
                     expect(response.body).to.have.property('name');
@@ -38,13 +56,38 @@ describe('API Testing', { tags: ['@api'] }, () => {
 
     context('Room API', () => {
         it('should return a 200 status code for all rooms', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the room API
+          // Assert
+          // Check that the response status is 200
             cy.request('GET', 'https://automationintesting.online/api/room')
                 .then((response) => {
                     expect(response.status).to.eq(200);
                 });
         });
 
+        it('should return a response time less than 1000ms for all rooms', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the room API
+          // Assert
+          // Check that the response time is less than 1000ms
+            cy.request('GET', 'https://automationintesting.online/api/room')
+                .then((response) => {
+                    expect(response.duration).to.be.lessThan(1000);
+                });
+        });
+
         it('should return a 200 status code for specific room', () => {
+          // Arrange
+          // Request the room API to get a room ID
+          // Act
+          // Request the specific room API using the room ID
+          // Assert
+          // Check that the response status is 200 and contains the expected room ID
             cy.request('GET', 'https://automationintesting.online/api/room')
                 .then((response) => {
                     const roomId = response.body.rooms[0].roomid;
@@ -59,6 +102,12 @@ describe('API Testing', { tags: ['@api'] }, () => {
         });
 
         it('should return a 200 status code for rooms with specific dates', () => {
+          // Arrange
+          // No specific arrangement needed for this test
+          // Act
+          // Request the room API with specific check-in and check-out dates
+          // Assert
+          // Check that the response status is 200
             cy.request('GET', 'https://automationintesting.online/api/room?checkin=2025-07-06&checkout=2025-07-07')
                 .then((response) => {
                     expect(response.status).to.eq(200);
@@ -66,6 +115,12 @@ describe('API Testing', { tags: ['@api'] }, () => {
         });
 
         it('should get room details', () => {
+          // Arrange
+          // Request the room API to get a room ID and details
+          // Act
+          // Request the specific room API using the room ID
+          // Assert
+          // Check that the response contains expected properties for the room
             cy.request('GET', 'https://automationintesting.online/api/room')
                 .then((response) => {
                     const roomId = response.body.rooms[0].roomid;
@@ -83,5 +138,4 @@ describe('API Testing', { tags: ['@api'] }, () => {
                 });
         });
     });
-
 });

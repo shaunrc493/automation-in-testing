@@ -1,5 +1,11 @@
 describe('Accessibility audit', { tags: ['@accessibility', '@non-functional'] }, () => {
     it('should inject axe and check for accessibility violations', () => {
+      // Arrange
+      // No specific arrangement needed for this test
+      // Act
+      // Visit the homepage and set viewport size
+      // Assert
+      // Check for accessibility violations using axe
         cy.visit('/');
         cy.viewport(1920, 1080);
         
